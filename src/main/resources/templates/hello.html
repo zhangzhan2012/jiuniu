@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>大师手酿</title>
+</head>
+<!--<script src="/js/jquery-1.8.3.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<body>
+    <div>
+    <img src="images/赖氏父子_01.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_02.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_03.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_04.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_05.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_06.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_07.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_08.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_09.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_10.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_11.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_12.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_13.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_14.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_15.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_16.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_17.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_18.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_19.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_20.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_21.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_22.jpg">
+    </div>
+    <div class="fl" style="width:100%; text-align:center; ">
+        <div class="center" style="color:#FFF; font-size:14px;">
+            微信号
+            <b style="color:#f5cc26;font-size:14px;display: none" id="yq">sjsy110</b>
+            <a href="#" οnclick="" id="a1" style="display: inline-block;">
+                <img id="a2" style="cursor:pointer;" src="images/赖氏父子_23.jpg" width="100%">
+            </a>
+        </div>
+    </div>
+    <div>
+    <img src="images/赖氏父子_24.jpg">
+    </div>
+    <div>
+    <img src="images/赖氏父子_25.jpg">
+    </div>
+</body>
+    <script type="text/javascript">
+        $(function(){
+            /*给标签添加跳转路径*/
+            var url = "weixin://";
+            $('#a1').attr('href',url)
+            var lj = "PIWI_SUBMIT.Weixin_Open()";
+            $('#a1').attr('onclick',lj);
+            /*封装函数复制内容*/
+            function copyArticle99(event){
+                const range = document.createRange();
+                range.selectNode(document.getElementById('yq'));
+                console.log(range.selectNode(document.getElementById('yq')))
+                const selection = window.getSelection();
+                if(selection.rangeCount > 0) selection.removeAllRanges();
+                selection.addRange(range);
+                /*复制成功的提示*/
+                document.execCommand('copy');
+                alert("已复制好，可打开微信粘贴。");
+            }
+            /*通过事件监听的冒泡原理 显示点击提示之后的的跳转*/
+            document.getElementById('a2').addEventListener('click', copyArticle99, false);
+        })
+</script>
+</html>
